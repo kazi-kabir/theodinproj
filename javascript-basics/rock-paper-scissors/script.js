@@ -14,10 +14,22 @@ function getComputerChoice() {
 
 console.log(getComputerChoice());
 
+/*
+tie
+paper beats rock
+rock beats scissors
+scissors beats paper
+*/
+
+
 function playRound(playerSelection, computerSelection) {
    computerSelection = getComputerChoice();
    if(playerSelection.toLowerCase() === computerSelection) {
         return "it's a tie"
+   }
+
+   if(playerSelection.toLowerCase() === 'paper' && computerSelection.toLowerCase() === 'rock') {
+        return 'player wins'
    }
 }
 
