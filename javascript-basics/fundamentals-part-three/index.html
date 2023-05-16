@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+
+    let add7 = (num) => {
+        return num + 7
+    }
+
+    console.log(add7(3));
+
+    let multiplyTwo = (num) => {
+        return num * 2;
+    }
+
+    let checkCapitalised = (letter) => {
+        
+        for(let i = 0; i < letter.length; i++) {
+            if(letter[i] === letter[i].toUpperCase()){
+            console.log(letter[i])
+            return true;
+        }
+
+        }
+        return false;
+    }
+
+    console.log(checkCapitalised('BotH'));
+
+    let lastLetter = (letter) => {
+        return letter[letter.length-1]
+    }
+
+    console.log(lastLetter("fooey"))
+
+   </script> 
+</body>
+</html>
