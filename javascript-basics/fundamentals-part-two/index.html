@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+    /**
+     * The code below tells the browser to ask you for a number
+     * then if that number is `6`, it returns `true` otherwise it returns `false`
+     * 
+     * Change this code so it returns `true` when the number is greater than or equal to 10, and false if it is less than 10
+     */
+
+
+    function numberChecker(number) {
+        if(number >= 10) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    console.log('expect true#1')
+    console.log(numberChecker(10))
+    console.log('expect false#2')
+    console.log(numberChecker(9))
+    console.log('expect true test#3')
+    console.log(numberChecker(11))
+
+   </script> 
+</body>
+</html>
