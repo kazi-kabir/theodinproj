@@ -24,16 +24,11 @@ function humanSelectionConversionToNumericalValue(humanInput) {
      let choices = ['rock', 'paper', 'scissors'];
      let res = choices.includes(humanInput.toLowerCase());
      let indexOfRes = choices.indexOf(sanitise);
-     console.log("human selection in numerical value");
-     console.log(res)
      return indexOfRes;
 }
 
 function playRound(playerSelection, computerSelection) {
-     console.log('ROUND PLAYED')
-     console.log('comp select')
      console.log(computerSelection)
-     console.log('hooman select before conversion')
      console.log(playerSelection)
      let numPlayerSelect = humanSelectionConversionToNumericalValue(playerSelection)
      return winner(numPlayerSelect, computerSelection);
@@ -41,15 +36,18 @@ function playRound(playerSelection, computerSelection) {
 
 let playerSelect;
 function reply_click() {
-     document.getElementById('log').innerHTML += '<br>';
-     console.log('this id')
-     console.log(this.id)
+     clearBox('log');
+     let randomNumberChecker = Math.random()
      let playerSelect = String(this.id)
      const computerSelection = getComputerChoice();
      let fooeybar = playRound(playerSelect, computerSelection)
      console.log(fooeybar);
-     document.getElementById('log').innerHTML += '<br>' + fooeybar;
-     
+     document.getElementById('log').innerHTML += fooeybar + " " + randomNumberChecker;
+}
+
+function clearBox(elementID)
+{
+    document.getElementById(elementID).innerHTML = "";
 }
 
 document.getElementById('rock').onclick = reply_click
