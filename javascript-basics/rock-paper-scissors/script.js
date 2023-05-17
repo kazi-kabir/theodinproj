@@ -67,9 +67,13 @@ function playRound(playerSelection, computerSelection) {
      console.log('ROUND PLAYED')
      console.log('comp select')
      console.log(computerSelection)
+     console.log('hooman select')
+     console.log(playerSelection)
      return winner(playerSelection, computerSelection);
 }
 
-const playerSelection = humanSelectionConversionToNumericalValue
+var nameInput = document.getElementsByClassName()
+
+const playerSelection = humanSelectionConversionToNumericalValue('rock')
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
