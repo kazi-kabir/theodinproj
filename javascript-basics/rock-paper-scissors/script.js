@@ -9,7 +9,7 @@ Tip: use the console to make sure this is returning the expected output before m
 
 function getComputerChoice() {
     let choices = ['rock', 'paper', 'scissors'];
-    return choices[Math.floor((Math.random()*choices.length))];
+    return Math.floor((Math.random()*choices.length));
 }
 
 console.log(getComputerChoice());
@@ -46,7 +46,7 @@ function winner(human, computer) {
      return 'human wins'
 }
 
-function findHumanSelection(humanInput) {
+function humanSelectionConversionToNumericalValue(humanInput) {
      let sanitise = humanInput.toLowerCase()
      let choices = ['rock', 'paper', 'scissors'];
 
@@ -56,15 +56,20 @@ function findHumanSelection(humanInput) {
      
      console.log("RESSSSS")
      console.log(res)
+     return indexOfRes;
 }
 
-findHumanSelection('scissors');
+humanSelectionConversionToNumericalValue('scissors');
 
 
 function playRound(playerSelection, computerSelection) {
-     winner(playerSelection, computerSelection)
+     
+     console.log('ROUND PLAYED')
+     console.log('comp select')
+     console.log(computerSelection)
+     return winner(playerSelection, computerSelection);
 }
 
-const playerSelection = "rock";
+const playerSelection = humanSelectionConversionToNumericalValue
 const computerSelection = getComputerChoice();
 console.log(playRound(playerSelection, computerSelection));
