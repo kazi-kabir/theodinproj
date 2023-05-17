@@ -12,11 +12,11 @@ function winner(human, computer) {
      if ((human+1) % 3 === computer) {
           return "computer wins"
      }
-
+     
      if (human === computer) {
           return 'draw'
      }
-
+     
      return 'human wins'
 }
 
@@ -25,17 +25,26 @@ function humanSelectionConversionToNumericalValue(humanInput) {
      let choices = ['rock', 'paper', 'scissors'];
      let res = choices.includes(humanInput.toLowerCase());
      let indexOfRes = choices.indexOf(sanitise);
+
      return indexOfRes;
 }
 
 function playRound(playerSelection, computerSelection) {
      console.log(computerSelection)
      console.log(playerSelection)
+
      let numPlayerSelect = humanSelectionConversionToNumericalValue(playerSelection)
+
      return winner(numPlayerSelect, computerSelection);
 }
 
+function clearBox(elementID){
+     document.getElementById(elementID).innerHTML = "";
+ }
+
 let playerSelect;
+
+//TO REFACTOR eventually
 function reply_click() {
      clearBox('log');
      let randomNumberChecker = Math.random()
@@ -43,13 +52,11 @@ function reply_click() {
      const computerSelection = getComputerChoice();
      let fooeybar = playRound(playerSelect, computerSelection)
      console.log(fooeybar);
+     
      document.getElementById('log').innerHTML += fooeybar + " " + randomNumberChecker;
 }
 
-function clearBox(elementID)
-{
-    document.getElementById(elementID).innerHTML = "";
-}
+
 
 document.getElementById('rock').onclick = reply_click
 document.getElementById('paper').onclick = reply_click
