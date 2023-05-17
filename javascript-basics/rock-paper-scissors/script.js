@@ -1,11 +1,12 @@
+const rock = 0;
+const paper = 1;
+const scissors = 2;
+
 function getComputerChoice() {
     let choices = ['rock', 'paper', 'scissors'];
     return Math.floor((Math.random()*choices.length));
 }
 
-const rock = 0;
-const paper = 1;
-const scissors = 2;
 
 function winner(human, computer) {
      if ((human+1) % 3 === computer) {
