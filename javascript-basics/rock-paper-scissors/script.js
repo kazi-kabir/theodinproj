@@ -30,9 +30,9 @@ def winner(p1, p2):
 
 */
 
-let rock = 0;
-let paper = 1;
-let scissors = 2;
+const rock = 0;
+const paper = 1;
+const scissors = 2;
 
 function winner(human, computer) {
      if ((human+1) % 3 === computer) {
@@ -63,7 +63,6 @@ humanSelectionConversionToNumericalValue('scissors');
 
 
 function playRound(playerSelection, computerSelection) {
-     
      console.log('ROUND PLAYED')
      console.log('comp select')
      console.log(computerSelection)
