@@ -19,18 +19,50 @@ tie
 paper beats rock
 rock beats scissors
 scissors beats paper
+
+def winner(p1, p2):
+...   if (p1+1) % 3 == p2:
+...     return "Player 2 won because their move is one greater than player 1"
+...   elif p1 == p2:
+...     return "It's a draw because both players played the same move"
+...   else:
+...     return "Player 1 wins because we know that it's not a draw and that player 2 didn't win"
+
 */
+
+let rock = 0;
+let paper = 1;
+let scissors = 2;
+
+function winner(human, computer) {
+     if ((human+1) % 3 === computer) {
+          return "computer wins"
+     }
+
+     if (human === computer) {
+          return 'draw'
+     }
+
+     return 'human wins'
+}
+
+function findHumanSelection(humanInput) {
+     let sanitise = humanInput.toLowerCase()
+     let choices = ['rock', 'paper', 'scissors'];
+
+     let res = choices.includes(humanInput.toLowerCase());
+     let indexOfRes = choices.indexOf(sanitise);
+     console.log("index of res" + indexOfRes)
+     
+     console.log("RESSSSS")
+     console.log(res)
+}
+
+findHumanSelection('scissors');
 
 
 function playRound(playerSelection, computerSelection) {
-   computerSelection = getComputerChoice();
-   if(playerSelection.toLowerCase() === computerSelection) {
-        return "it's a tie"
-   }
-
-   if(playerSelection.toLowerCase() === 'paper' && computerSelection.toLowerCase() === 'rock') {
-        return 'player wins'
-   }
+     winner(playerSelection, computerSelection)
 }
 
 const playerSelection = "rock";
