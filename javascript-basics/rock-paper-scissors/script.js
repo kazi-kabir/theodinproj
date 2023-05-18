@@ -3,8 +3,7 @@ const paper = 1;
 const scissors = 2;
 
 function getComputerChoice() {
-    let choices = ['rock', 'paper', 'scissors'];
-    return Math.floor((Math.random()*choices.length));
+    return Math.floor(Math.random() * 3);
 }
 
 
@@ -23,16 +22,12 @@ function winner(human, computer) {
 function humanSelectionConversionToNumericalValue(humanInput) {
      let sanitise = humanInput.toLowerCase()
      let choices = ['rock', 'paper', 'scissors'];
-     let res = choices.includes(humanInput.toLowerCase());
      let indexOfRes = choices.indexOf(sanitise);
 
      return indexOfRes;
 }
 
 function playRound(playerSelection, computerSelection) {
-     console.log(computerSelection)
-     console.log(playerSelection)
-
      let numPlayerSelect = humanSelectionConversionToNumericalValue(playerSelection)
 
      return winner(numPlayerSelect, computerSelection);
@@ -50,10 +45,9 @@ function reply_click() {
      let randomNumberChecker = Math.random()
      let playerSelect = String(this.id)
      const computerSelection = getComputerChoice();
-     let fooeybar = playRound(playerSelect, computerSelection)
-     console.log(fooeybar);
      
-     document.getElementById('log').innerHTML += fooeybar + " " + randomNumberChecker;
+     let res = playRound(playerSelect, computerSelection);
+     document.getElementById('log').innerHTML += res + " " + randomNumberChecker;
 }
 
 
