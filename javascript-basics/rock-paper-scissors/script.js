@@ -37,6 +37,33 @@ function clearBox(elementID){
      document.getElementById(elementID).innerHTML = "";
  }
 
+// rules for func
+// play 5 times, whoever wins is winner
+function trackWinner(res) {     
+     let human = 0;
+     let computer = 0;
+     let gamesPlayed = 0;
+     console.log('inside trackwinner')
+
+     if (res === "computer wins") {
+          gamesPlayed++;
+          computer++
+     }
+
+     if (res === 'human wins') {
+          gamesPlayed++;
+          human++;
+     }
+
+     if(gamesPlayed === 5 && human === computer) {
+          console.log('draw round')
+     }
+
+     if (gamesPlayed === 5) {
+          console.log(Math.max(human, computer));
+     }
+}
+
 let playerSelect;
 
 //TO REFACTOR eventually
@@ -47,6 +74,7 @@ function reply_click() {
      const computerSelection = getComputerChoice();
      
      let res = playRound(playerSelect, computerSelection);
+     trackWinner(res);
      document.getElementById('log').innerHTML += res + " " + randomNumberChecker;
 }
 
