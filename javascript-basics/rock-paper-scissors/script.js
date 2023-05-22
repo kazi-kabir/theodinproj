@@ -39,19 +39,20 @@ function clearBox(elementID){
 
 // rules for func
 // play 5 times, whoever wins is winner
+// store outside func, because the variables reset 
+let human = 0;
+let computer = 0;
+let gamesPlayed = 0;
+
 function trackWinner(res) {     
-     let human = 0;
-     let computer = 0;
-     let gamesPlayed = 0;
      console.log('inside trackwinner')
+     gamesPlayed++;
 
      if (res === "computer wins") {
-          gamesPlayed++;
           computer++
      }
 
      if (res === 'human wins') {
-          gamesPlayed++;
           human++;
      }
 
@@ -60,8 +61,15 @@ function trackWinner(res) {
      }
 
      if (gamesPlayed === 5) {
-          console.log(Math.max(human, computer));
+          gamesPlayed = 0;
+          console.log('winner of the round');
+          human > computer ? console.log('human wins') : console.log('computer wins');
+          console.log('human score' + human);
+          console.log('computer score' + computer);
      }
+
+     console.log(gamesPlayed)
+     
 }
 
 let playerSelect;
