@@ -63,7 +63,7 @@ function trackWinner(res) {
      if (gamesPlayed === 5) {
           gamesPlayed = 0;
           console.log('winner of the round');
-          let res = human > computer ? 'human wins' : 'computer wins'
+          let res = human > computer ? 'human wins round' : 'computer wins round'
           console.log(res + ' res')
           document.getElementById('scoreLogger').innerHTML += res;
      }
@@ -85,8 +85,6 @@ function reply_click() {
      trackWinner(res);
      document.getElementById('log').innerHTML += res;
 }
-
-
 
 document.getElementById('rock').onclick = reply_click
 document.getElementById('paper').onclick = reply_click
