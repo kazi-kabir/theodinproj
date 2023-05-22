@@ -63,9 +63,9 @@ function trackWinner(res) {
      if (gamesPlayed === 5) {
           gamesPlayed = 0;
           console.log('winner of the round');
-          human > computer ? console.log('human wins') : console.log('computer wins');
-          console.log('human score' + human);
-          console.log('computer score' + computer);
+          let res = human > computer ? 'human wins' : 'computer wins'
+          console.log(res + ' res')
+          document.getElementById('scoreLogger').innerHTML += res;
      }
 
      console.log(gamesPlayed)
@@ -77,13 +77,13 @@ let playerSelect;
 //TO REFACTOR eventually
 function reply_click() {
      clearBox('log');
-     let randomNumberChecker = Math.random()
+     clearBox('scoreLogger');
      let playerSelect = String(this.id)
      const computerSelection = getComputerChoice();
      
      let res = playRound(playerSelect, computerSelection);
      trackWinner(res);
-     document.getElementById('log').innerHTML += res + " " + randomNumberChecker;
+     document.getElementById('log').innerHTML += res;
 }
 
 
