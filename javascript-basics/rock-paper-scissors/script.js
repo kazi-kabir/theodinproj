@@ -64,6 +64,8 @@ function trackWinner(res) {
           gamesPlayed = 0;
           console.log('winner of the round');
           let res = human > computer ? 'human wins round' : 'computer wins round'
+          console.log('comp score' + computer);
+          console.log('human score' + human);
           console.log(res + ' res')
           document.getElementById('scoreLogger').innerHTML += res;
      }
