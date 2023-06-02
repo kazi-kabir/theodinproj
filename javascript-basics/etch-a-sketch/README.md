@@ -1,5 +1,6 @@
-- make grid
+x make grid
 
-- change colour on mouse over
+- permanently change colour on mouseover
+    - trigger something on mouseover
 
 - host this somewhere
