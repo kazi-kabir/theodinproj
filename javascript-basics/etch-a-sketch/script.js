@@ -8,3 +8,11 @@ function changeDivColour() {
     document.getElementsByClassName('cell')[i].style.backgroundColor = 'red';
 }
 
+
+// give divs a unique id ? 
+
+// so collect the class of divs e.g inside foo
+// for each cell in foo give it a unique id 
+// onhover get the ID of that specific div 
+
+
