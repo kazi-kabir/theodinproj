@@ -1,15 +1,7 @@
 let i=0, n=16;
 
-function myFunc(id) {
-    console.log('myfunc')
-    console.log(id)
-    let node = document.getElementById(id);
-    let content = console.log(node.innerHTML)
+function changeColour(id) {    
     document.getElementById(id).classList.add("cellHover");
-}
-
-function uid() {
-    return Math.random().toString(36);
 }
 
 container.innerHTML = 
@@ -25,7 +17,7 @@ function getElements() {
     for(let i = 0; i < allElements.length; i++) {
         allElements[i].setAttribute('id', i + 1);
         allElements[i].onmouseover = function(e) {
-            myFunc(allElements[i].id)
+            changeColour(allElements[i].id)
         }
     }
 }
