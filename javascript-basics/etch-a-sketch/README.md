@@ -1,8 +1,10 @@
 x make grid
 
-- stop the one red one
+- hover effect
+  x trigger an event when mouseover
+  - change div colour on mouseover
+    - give each div a unique ID 
 
-- permanently change colour on mouseover
-    - trigger something on mouseover
+- clear button
 
 - host this somewhere
