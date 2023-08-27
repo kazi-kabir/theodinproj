@@ -16,3 +16,11 @@ function multiply(first, second) {
 
 let res = add(1, 2);
 console.log(res);
+
+let first;
+let second;
+let operator; 
+
+function operator(first, second, operate) {
+    
+}
