@@ -13,3 +13,6 @@ function divide(first, second) {
 function multiply(first, second) {
     return first * second;
 } 
+
+let res = add(1, 2);
+console.log(res);
