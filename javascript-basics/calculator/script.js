@@ -32,4 +32,3 @@ function operate(first, second, operator) {
         return multiply(first, second);
     }
 } 
-            
