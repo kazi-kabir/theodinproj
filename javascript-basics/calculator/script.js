@@ -31,4 +31,14 @@ function operate(first, second, operator) {
     } else if (operator === '*') {
         return multiply(first, second);
     }
-} 
+}
+
+function myFunction(id) {
+    console.log(id)
+}
+
+let input = myFunction();
+let out = document.getElementById('out');
+input.onkeyup = function() {
+  out.innerHTML = input.value;
+}
