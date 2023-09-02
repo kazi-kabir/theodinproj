@@ -33,12 +33,62 @@ function operate(first, second, operator) {
     }
 }
 
-function myFunction(id) {
-    console.log(id)
+function convertIdToNumbers(id) {
+    if(id === 'one') {
+        return 1;
+    }
+
+    if(id === 'two') { 
+        return 2;
+    }
+
+    if(id === 'three') { 
+        return 3;
+    }
+
+    if(id === 'four') {
+        return 4;
+    }
+
+    if(id === 'five') {
+        return 5;
+    }
+
+    if(id === 'six') {
+        return 6;
+    }
+
+    if(id === 'seven') {
+        return 7;
+    }
+
+    if(id === 'eight') {
+
+        return 8;
+    }
+
+    if(id === 'nine') {
+        return 9;
+    }
+
+    if(id === 'zero') {
+        return 0;
+    }
 }
 
-let input = myFunction();
-let out = document.getElementById('out');
-input.onkeyup = function() {
-  out.innerHTML = input.value;
+
+function myFunction(id) {
+    console.log(id)
+    let output = document.getElementById('out');
+    // add some css to output div for consistent spacing
+    let firstNum = convertIdToNumbers(id)
+
+
+    output.append(firstNum);
 }
+
+// let out = document.getElementById('out');
+// input.onkeyup = function() {
+//   out.innerHTML = input.value;
+//   console.log('hi')
+// }
