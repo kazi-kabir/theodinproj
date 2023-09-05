@@ -20,6 +20,8 @@ console.log(res);
 let first;
 let second;
 let operator; 
+let firstNumEntered;
+let secondNumEntered;
 
 function operate(first, second, operator) {
     if (operator === '+') {
@@ -97,6 +99,17 @@ function convertIdToNumbers(id) {
 
 
 function gatherFirstNumber(id) {
+    if(firstNumEntered) {
+        console.log(id);
+        let output = document.getElementById('out');
+        let secondNum = convertIdToNumbers(id)
+
+        console.log('i am second num')
+        output.append(secondNum); 
+        secondNumEntered = true;
+        return; 
+    }
+    
     console.log(id)
     let output = document.getElementById('out');
     // add some css to output div for consistent spacing
@@ -112,8 +125,17 @@ function clearOutput() {
 }
 
 function triggerOperate(id) {
+    if(secondNumEntered) {
+        let res = operate(first, second, id);
+        output = document.getElementById('out');
+        
+        console.log(res);
+        output.innerHTML = res;
+    }
+
     let firstNum = document.getElementById('out').innerHTML
     console.log('inside triggerOperate');
     console.log("operand" + convertOperand(id))
     console.log(firstNum);    
+    firstNumEntered = true;
 }
