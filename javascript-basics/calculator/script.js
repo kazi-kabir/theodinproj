@@ -33,6 +33,25 @@ function operate(first, second, operator) {
     }
 }
 
+function convertOperand(id) {
+    if(id === 'plus') {
+        return '+';
+    }
+
+    if(id === 'minus') {
+        return '-';
+    }
+
+    if (id === 'divide') {
+        return '/';
+    }
+
+    if (id === 'multiply') {
+        return '*';
+    }
+
+}
+
 function convertIdToNumbers(id) {
     if(id === 'one') {
         return 1;
@@ -77,7 +96,7 @@ function convertIdToNumbers(id) {
 }
 
 
-function myFunction(id) {
+function gatherFirstNumber(id) {
     console.log(id)
     let output = document.getElementById('out');
     // add some css to output div for consistent spacing
@@ -90,4 +109,11 @@ function clearOutput() {
     // add some css to output div for consistent spacing
     console.log('inside clear')
     output.innerHTML = '';
+}
+
+function triggerOperate(id) {
+    let firstNum = document.getElementById('out').innerHTML
+    console.log('inside triggerOperate');
+    console.log("operand" + convertOperand(id))
+    console.log(firstNum);    
 }
