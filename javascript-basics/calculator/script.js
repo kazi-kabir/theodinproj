@@ -82,13 +82,12 @@ function myFunction(id) {
     let output = document.getElementById('out');
     // add some css to output div for consistent spacing
     let firstNum = convertIdToNumbers(id)
-
-
     output.append(firstNum);
 }
 
-// let out = document.getElementById('out');
-// input.onkeyup = function() {
-//   out.innerHTML = input.value;
-//   console.log('hi')
-// }
+function clearOutput() {
+    let output = document.getElementById('out');
+    // add some css to output div for consistent spacing
+    console.log('inside clear')
+    output.innerHTML = '';
+}
