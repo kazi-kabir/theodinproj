@@ -1,9 +1,16 @@
+let first;
+let second;
+let operator; 
+
+let isFirstNumEntered;
+let isSecondNumEntered;
+
 function add(first, second) {
-    return first + second;
+    return parseInt(first) + parseInt(second);
 }
 
 function subtract(first, second) {
-    return first - second;
+    return parseInt(first) - parseInt(second);
 } 
 
 function divide(first, second) {
@@ -14,23 +21,14 @@ function multiply(first, second) {
     return first * second;
 } 
 
-let res = add(1, 2);
-console.log(res);
-
-let first;
-let second;
-let operator; 
-let firstNumEntered;
-let secondNumEntered;
-
 function operate(first, second, operator) {
-    if (operator === '+') {
+    if (operator === 'plus') {
         return add(first, second);
-    } else if (operator === '-') {
+    } else if (operator === 'minus') {
         return subtract(first, second);
-    } else if (operator === '/') {
+    } else if (operator === 'divide') {
         return divide(first, second);
-    } else if (operator === '*') {
+    } else if (operator === 'multiply') {
         return multiply(first, second);
     }
 }
@@ -97,19 +95,24 @@ function convertIdToNumbers(id) {
     }
 }
 
+function collectNumbers(id) {
 
-function gatherFirstNumber(id) {
-    if(firstNumEntered) {
-        console.log(id);
+    if(isFirstNumEntered) {
         let output = document.getElementById('out');
+        // add some css to output div for consistent spacing
         let secondNum = convertIdToNumbers(id)
-
-        console.log('i am second num')
+        second = secondNum;
         output.append(secondNum); 
-        secondNumEntered = true;
-        return; 
+        console.log('first num' + first);
+        console.log('second num' + second);
+        isSecondNumEntered = true;
+        console.log('operator res');
+        let res = operate(first, second, operator);
+        console.log(res)
+        return;
     }
-    
+
+
     console.log(id)
     let output = document.getElementById('out');
     // add some css to output div for consistent spacing
@@ -117,25 +120,20 @@ function gatherFirstNumber(id) {
     output.append(firstNum);
 }
 
+
 function clearOutput() {
     let output = document.getElementById('out');
-    // add some css to output div for consistent spacing
     console.log('inside clear')
     output.innerHTML = '';
+    isFirstNumEntered = false;
+    isSecondNumEntered = false;
 }
 
 function triggerOperate(id) {
-    if(secondNumEntered) {
-        let res = operate(first, second, id);
-        output = document.getElementById('out');
-        
-        console.log(res);
-        output.innerHTML = res;
-    }
-
-    let firstNum = document.getElementById('out').innerHTML
-    console.log('inside triggerOperate');
-    console.log("operand" + convertOperand(id))
-    console.log(firstNum);    
-    firstNumEntered = true;
+    console.log('inside trigger');
+    let output = document.getElementById('out');
+    first = output.innerHTML;
+    isFirstNumEntered = true;
+    operator = id;
+    console.log(first);
 }
