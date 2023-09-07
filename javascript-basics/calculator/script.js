@@ -53,46 +53,22 @@ function convertOperand(id) {
 }
 
 function convertIdToNumbers(id) {
-    if(id === 'one') {
-        return 1;
+    listOfNumbers = {
+        'one': 1, 
+        'two': 2,
+        'three': 3,
+        'four': 4,
+        'five': 5,
+        'six': 6,
+        'seven': 7,
+        'eight': 8,
+        'nine': 9,
+        'zero': 0,    
     }
 
-    if(id === 'two') { 
-        return 2;
-    }
-
-    if(id === 'three') { 
-        return 3;
-    }
-
-    if(id === 'four') {
-        return 4;
-    }
-
-    if(id === 'five') {
-        return 5;
-    }
-
-    if(id === 'six') {
-        return 6;
-    }
-
-    if(id === 'seven') {
-        return 7;
-    }
-
-    if(id === 'eight') {
-
-        return 8;
-    }
-
-    if(id === 'nine') {
-        return 9;
-    }
-
-    if(id === 'zero') {
-        return 0;
-    }
+    console.log('inside convIdToNums');
+    console.log(listOfNumbers[id]);
+    return listOfNumbers[id];
 }
 
 function collectNumbers(id) {
