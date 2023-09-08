@@ -37,7 +37,7 @@ function convertOperand(id) {
         'plus': '+',
         'minus': '-',
         'divide': '/',
-        'multiply': '*',
+        'multiply': '×',
     }
 
     return operatorsList[id];
@@ -78,7 +78,6 @@ function collectNumbers(id) {
         console.log(res);
         return
     }
-
 
     console.log(id)
     let output = document.getElementById('out');
