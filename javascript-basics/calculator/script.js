@@ -75,6 +75,7 @@ function collectNumbers(id) {
         isSecondNumEntered = true;
         console.log('operator res');
         let res = operate(first, second, operator);
+        appendRes(res);
         console.log(res);
         return
     }
@@ -82,14 +83,21 @@ function collectNumbers(id) {
     console.log(id)
     let output = document.getElementById('out');
     // add some css to output div for consistent spacing
-    let firstNum = convertIdToNumbers(id)
+    let firstNum = convertIdToNumbers(id);
     output.append(firstNum);
 }
 
 
+function appendRes(res) {
+    let resDisplay = document.getElementById('res');
+    resDisplay.innerHTML = res; 
+}
+
 function clearOutput() {
     let output = document.getElementById('out');
+    let resDisplay = document.getElementById('res');
     console.log('inside clear')
+    resDisplay.innerHTML = '';
     output.innerHTML = '';
     isFirstNumEntered = false;
     isSecondNumEntered = false;
