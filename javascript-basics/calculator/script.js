@@ -34,22 +34,14 @@ function operate(first, second, operator) {
 }
 
 function convertOperand(id) {
-    if(id === 'plus') {
-        return '+';
+    operatorsList = {
+        'plus': '+',
+        'minus': '-',
+        'divide': '/',
+        'multiply': '*',
     }
 
-    if(id === 'minus') {
-        return '-';
-    }
-
-    if (id === 'divide') {
-        return '/';
-    }
-
-    if (id === 'multiply') {
-        return '*';
-    }
-
+    return operatorsList[id];
 }
 
 function convertIdToNumbers(id) {
