@@ -1,7 +1,6 @@
 let first;
 let second;
 let operator; 
-
 let isFirstNumEntered;
 let isSecondNumEntered;
 
@@ -76,8 +75,8 @@ function collectNumbers(id) {
         isSecondNumEntered = true;
         console.log('operator res');
         let res = operate(first, second, operator);
-        console.log(res)
-        return;
+        console.log(res);
+        return
     }
 
 
@@ -103,5 +102,6 @@ function triggerOperate(id) {
     first = output.innerHTML;
     isFirstNumEntered = true;
     operator = id;
+    output.append(convertOperand(id));
     console.log(first);
 }
