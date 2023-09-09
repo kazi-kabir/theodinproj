@@ -66,7 +66,6 @@ function collectNumbers(id) {
 
     if(isFirstNumEntered) {
         let output = document.getElementById('out');
-        // add some css to output div for consistent spacing
         let secondNum = convertIdToNumbers(id)
         second = secondNum;
         output.append(secondNum); 
@@ -82,7 +81,6 @@ function collectNumbers(id) {
 
     console.log(id)
     let output = document.getElementById('out');
-    // add some css to output div for consistent spacing
     let firstNum = convertIdToNumbers(id);
     output.append(firstNum);
 }
@@ -101,6 +99,13 @@ function clearOutput() {
     output.innerHTML = '';
     isFirstNumEntered = false;
     isSecondNumEntered = false;
+}
+
+function clearSingleOutput() {
+    let output = document.getElementById('out').innerHTML;
+    let outputHolder = [...output];
+    outputHolder.pop();
+    document.getElementById('out').innerHTML = outputHolder.join(''); 
 }
 
 function triggerOperate(id) {
