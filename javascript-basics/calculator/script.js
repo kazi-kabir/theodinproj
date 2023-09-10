@@ -63,6 +63,18 @@ function convertIdToNumbers(id) {
 }
 
 function collectNumbers(id) {
+    
+    // logic to continually add numbers
+    if(isFirstNumEntered && isSecondNumEntered) {
+        let output = document.getElementById('out').innerHTML;
+        console.log('inside collectNumbers double boolean');
+        console.log(output)
+        
+        
+        
+        return;
+    }
+
 
     if(isFirstNumEntered) {
         let output = document.getElementById('out');
