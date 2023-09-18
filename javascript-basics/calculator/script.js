@@ -3,6 +3,7 @@ let second;
 let operator; 
 let isFirstNumEntered;
 let isSecondNumEntered;
+let isOperandTriggered; 
 
 function add(first, second) {
     return parseInt(first) + parseInt(second);
