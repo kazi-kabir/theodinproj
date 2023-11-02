@@ -64,21 +64,33 @@ function convertIdToNumbers(id) {
 }
 
 
+// the upper div that does the calculation
 function collectNumbers(id) {
     // logic to continually add numbers
 
+    if(isFirstNumEntered) {
+        let output = document.getElementById('out');
+        let secondNum = convertIdToNumbers(id)
+        second = secondNum;
+        output.append(secondNum); 
+        console.log('first num' + first);
+        console.log('second num' + second);
+        isSecondNumEntered = true;
+        console.log('operator res');
+        let res = operate(first, second, operator);
+        output.innerHTML = secondNum;
+        appendRes(res);
+        console.log(res);
+        return
+    }
+
+    console.log(id)
     let output = document.getElementById('out');
     let firstNum = convertIdToNumbers(id);
     output.append(firstNum);
-
-    if(isOperandTriggered) {
-       secondNum = convertIdToNumbers(id);
-       console.log(operator + 'operator');
-       let res = operate(first, secondNum, operator);
-       console.log(res)
-    }
-
 }
+
+// this function displays the output to the bottom window 
 
 function appendRes(res) {
     let resDisplay = document.getElementById('res');
@@ -106,8 +118,10 @@ function clearSingleOutput() {
 // we basically need this function 
 // to replace what is inside the top box
 function triggerOperate(id) {
-    console.log(id)
-    operator = convertOperand(id);
-    console.log(operator);
-    isOperandTriggered = true; 
+    console.log('inside trigger');
+    let output = document.getElementById('out');
+    first = output.innerHTML;
+    isFirstNumEntered = true;
+    operator = id;
+    console.log(first);
 }
