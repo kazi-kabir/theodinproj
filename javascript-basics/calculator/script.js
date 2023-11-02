@@ -63,16 +63,14 @@ function convertIdToNumbers(id) {
     return listOfNumbers[id];
 }
 
+
+// the upper div that does the calculation
 function collectNumbers(id) {
-    
     // logic to continually add numbers
     if(isFirstNumEntered && isSecondNumEntered) {
         let output = document.getElementById('out').innerHTML;
         console.log('inside collectNumbers double boolean');
         console.log(output)
-        
-        
-        
         return;
     }
 
@@ -98,9 +96,10 @@ function collectNumbers(id) {
     output.append(firstNum);
 }
 
-
+// this function displays the output to the bottom window 
 function appendRes(res) {
     let resDisplay = document.getElementById('res');
+    console.log(res + 'hey inside res')
     resDisplay.innerHTML = res; 
 }
 
