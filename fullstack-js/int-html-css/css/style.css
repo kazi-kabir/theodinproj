@@ -1,9 +1,11 @@
-main div {
-    /* Our cool CSS */
+p {
+  --main-bg: red;
 }
 
-main > div {
-    /* Our cool CSS */
-    border-style: dotted;
-    border: '1px'
+.cool-paragraph {
+  background-color: var(--main-bg);
+}
+
+.boring-paragraph {
+  background-color: var(--main-bg);
 }

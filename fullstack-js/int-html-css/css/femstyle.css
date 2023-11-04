@@ -1,0 +1,9 @@
+main div {
+    /* Our cool CSS */
+}
+
+main > div {
+    /* Our cool CSS */
+    border-style: dotted;
+    border: '1px'
+}
