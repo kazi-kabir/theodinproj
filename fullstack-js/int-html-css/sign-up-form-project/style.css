@@ -1,3 +1,16 @@
-h1 {
-    color: green;
+img {
+    position: absolute;
+    top: 25px;
+    left: 25px;
 }
+
+#doge {
+    width: 400px;
+    height: auto;
+}
+
+#bg-image {
+    width: 400px;
+    height: auto;
+}
+
