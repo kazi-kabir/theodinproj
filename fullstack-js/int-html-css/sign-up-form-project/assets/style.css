@@ -1,16 +1,25 @@
-img {
-    position: absolute;
-    top: 25px;
-    left: 25px;
-}
-
-#doge {
-    width: 400px;
-    height: auto;
+#right-pane form {
+    padding-top: 400px;
+    float: right;
+    width: 50%
 }
 
 #bg-image {
-    width: 400px;
-    height: auto;
+    position:absolute; 
+    top: 0px; 
+    left: 0px; 
+    z-index: 1;
+    max-width: 800px; 
+    height: 1200px
+}
+        
+#doge {
+    position:absolute; 
+    padding-top: 300px;
+    padding-left: 200px;
+    top: 70px; 
+    left: 100px; 
+    z-index: 3;
+    max-width: 200px;
 }
 
