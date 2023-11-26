@@ -56,7 +56,11 @@ label {
 }
 
 h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: green;    
     position:absolute;
     z-index:1;
+    top: 62%;
+    left: 21%;
+    transform: translate(-50%, -50%);
 }
