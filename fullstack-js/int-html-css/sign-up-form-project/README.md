@@ -6,6 +6,6 @@ TODO
   - add text for banner 
 
 - functionality 
-  - ensure passwords match
-  - when incorrect value is entered, ensure the user is notified
-  - when pressing submit, ensure appropriate JSON body is sent 
+  - ensure passwords match (hacky but ok)
+  - when incorrect value is entered, ensure the user is notified (ok)
+  - when pressing submit, ensure appropriate JSON body is sent ---> doing rn

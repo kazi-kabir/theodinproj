@@ -15,6 +15,21 @@ function comparePasswords(event) {
      }
 
     window.alert('password matching'); 
+
+     convertFormDataToJSON();
 }
+
+function convertFormDataToJSON() {
+    var formEl = document.forms.signUpForm;
+
+    var formData = new FormData(formEl);
+
+    var name = formData.get('fname');
+
+    console.log(formData)
+}
+
+
+
 
 
