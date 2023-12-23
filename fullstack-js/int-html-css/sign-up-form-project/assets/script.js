@@ -21,12 +21,13 @@ function comparePasswords(event) {
 
 function convertFormDataToJSON() {
     var formEl = document.forms.signUpForm;
-
     var formData = new FormData(formEl);
+    var object = {};
 
-    var name = formData.get('fname');
+    formData.forEach((value, key) => object[key] = value);
+    var json = JSON.stringify(object);
 
-    console.log(formData)
+    console.log(json)
 }
 
 
