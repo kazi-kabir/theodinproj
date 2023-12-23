@@ -4,12 +4,17 @@ console.log('hello')
 // get both passwords somehow and render them to console 
 // then find a matching algo online
 
-password = document.getElementById('pass')
 
-console.log(password)
+function comparePasswords(event) {
+    event.preventDefault
+    password = document.getElementById('pass');
+    confPassword = document.getElementById('check-pass')
 
-function comparePasswords() {
-    console.log(password)
+    if(password.innerHTML !== confPassword.innerHTML) {
+        window.alert("Passwords do not match!");
+     }
+
+    window.alert('password matching'); 
 }
 
 
