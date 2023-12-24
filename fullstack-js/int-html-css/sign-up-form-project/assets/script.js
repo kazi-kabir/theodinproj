@@ -14,18 +14,18 @@ function comparePasswords(event) {
         window.alert("Passwords do not match!");
      }
 
-    window.alert('password matching'); 
+    console.log('passwords matching')
 
      convertFormDataToJSON();
 }
 
 function convertFormDataToJSON() {
-    var formEl = document.forms.signUpForm;
-    var formData = new FormData(formEl);
-    var object = {};
+    let formEl = document.forms.signUpForm;
+    let formData = new FormData(formEl);
+    let object = {};
 
     formData.forEach((value, key) => object[key] = value);
-    var json = JSON.stringify(object);
+    let json = JSON.stringify(object);
 
     console.log(json)
 }
