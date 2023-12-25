@@ -1,0 +1,42 @@
+.side-nav-container {
+    margin: 0;
+    padding: 0;
+    min-width: 200px;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .side-nav-container, a {
+    display: block;
+    color: black;
+  }
+
+  .header {
+    padding: 30px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 10px;
+    max-height: 200px;
+  }
+
+  .grid-container {
+    display: grid;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: #2196F3;
+    margin-left: 250px;
+    margin-top: 20px;
+  }
+
+  .grid-item {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 50px;
+    margin: 10px;
+    font-size: 30px;
+    text-align: center;
+  }
+
