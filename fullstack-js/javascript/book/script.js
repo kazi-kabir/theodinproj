@@ -52,3 +52,15 @@ function addRowToTable() {
     table.appendChild(row)
 }
 
+function submitBook() {
+    const newDiv = document.createElement("div");
+
+    // and give it some content
+    const newContent = document.createTextNode("Hi there and greetings!");
+
+    // add the text node to the newly created div
+    newDiv.appendChild(newContent);
+
+    const currentDiv = document.getElementById("div1");
+    document.body.insertBefore(newDiv, currentDiv);
+}
