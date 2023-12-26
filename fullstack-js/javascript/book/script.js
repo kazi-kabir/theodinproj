@@ -129,10 +129,14 @@ function submitBook() {
                 form.appendChild(br.cloneNode()); 
 
                 form.appendChild(input)
-                form.appendChild(inputTwo)
                 form.appendChild(labelForYes)
+
+                form.appendChild(inputTwo)
                 form.appendChild(labelForNo)
-                 
+                
+                let linebreak = document.createElement('br');
+                form.append(linebreak)
+
                 form.appendChild(s); 
 
 
