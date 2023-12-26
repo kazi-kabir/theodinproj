@@ -63,71 +63,79 @@ function submitBook() {
 
     var br = document.createElement("br"); 
 
+    
+
+//    this.pages = pages;
+// .  this.read = read;
+
+
     // Create a form dynamically
     var form = document.createElement("form");
     form.setAttribute("method", "post");
     form.setAttribute("action", "submit.php");
  
     // Create an input element for Full Name
-    var FN = document.createElement("input");
-    FN.setAttribute("type", "text");
-    FN.setAttribute("name", "FullName");
-    FN.setAttribute("placeholder", "Full Name");
+    var title = document.createElement("input");
+    title.setAttribute("type", "text");
+    title.setAttribute("name", "Title");
+    title.setAttribute("placeholder", "Title");
  
      // Create an input element for date of birth
-     var DOB = document.createElement("input");
-     DOB.setAttribute("type", "text");
-     DOB.setAttribute("name", "dob");
-     DOB.setAttribute("placeholder", "DOB");
+     var author = document.createElement("input");
+     author.setAttribute("type", "text");
+     author.setAttribute("name", "author");
+     author.setAttribute("placeholder", "Author");
  
      // Create an input element for emailID
-     var EID = document.createElement("input");
-     EID.setAttribute("type", "text");
-     EID.setAttribute("name", "emailID");
-     EID.setAttribute("placeholder", "E-Mail ID");
+     var pages = document.createElement("input");
+     pages.setAttribute("type", "text");
+     pages.setAttribute("name", "pages");
+     pages.setAttribute("placeholder", "Pages");
  
-      // Create an input element for password
-      var PWD = document.createElement("input");
-      PWD.setAttribute("type", "password");
-      PWD.setAttribute("name", "password");
-      PWD.setAttribute("placeholder", "Password");
+     const input = document.createElement('input');
+     input.type = 'radio';
+     input.className = 'question-option';
+     input.value = 'name';
+     input.id = 'fem';
+     input.name = 'question-option';
+
+     const labelForYes = document.createElement('label');
+     labelForYes.for = 'yes';
+     labelForYes.textContent = 'Yes'
+    
+     const inputTwo = document.createElement('input');
+     inputTwo.type = 'radio';
+     inputTwo.className = 'question-option';
+     inputTwo.value = 'name';
+     inputTwo.id = 'fem';
+     inputTwo.name = 'question-option';
  
-       // Create an input element for retype-password
-       var RPWD = document.createElement("input");
-       RPWD.setAttribute("type", "password");
-       RPWD.setAttribute("name", "reTypePassword");
-       RPWD.setAttribute("placeholder", "ReEnter Password");
+     const labelForNo = document.createElement('label');
+     labelForNo.for = 'no';
+     labelForNo.textContent = 'No'
  
-                // create a submit button
                 var s = document.createElement("input");
                 s.setAttribute("type", "submit");
                 s.setAttribute("value", "Submit");
                  
-                // Append the full name input to the form
-                form.appendChild(FN); 
+                form.appendChild(title); 
                  
-                // Inserting a line break
+                form.appendChild(br.cloneNode()); 
+
+                form.appendChild(author); 
                 form.appendChild(br.cloneNode()); 
                  
-                // Append the DOB to the form
-                form.appendChild(DOB); 
+                form.appendChild(pages); 
                 form.appendChild(br.cloneNode()); 
+
+                form.appendChild(input)
+                form.appendChild(inputTwo)
+                form.appendChild(labelForYes)
+                form.appendChild(labelForNo)
                  
-                // Append the emailID to the form
-                form.appendChild(EID); 
-                form.appendChild(br.cloneNode()); 
-                 
-                // Append the Password to the form
-                form.appendChild(PWD); 
-                form.appendChild(br.cloneNode()); 
-                 
-                // Append the ReEnterPassword to the form
-                form.appendChild(RPWD); 
-                form.appendChild(br.cloneNode()); 
-                 
-                // Append the submit button to the form
                 form.appendChild(s); 
- 
+
+
                 document.getElementsByTagName("body")[0]
                .appendChild(form);
 
