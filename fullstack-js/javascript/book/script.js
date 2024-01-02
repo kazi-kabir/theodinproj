@@ -3,6 +3,23 @@ console.log('hi!')
 
 const myLibrary = [];
 
+(function(window, document, undefined) {
+
+    // code that should be taken care of right away
+  
+    window.onload = init;
+  
+    function init(){
+      // the code to be called when the dom has loaded
+      // #document has its nodes
+      let originalContent = document.getElementById("myTable")
+      console.log('original content reference')
+      console.log(originalContent)      
+    }
+  
+  })(window, document, undefined);
+
+
 function Book(title, author, pages, read){
     this.title = title;
     this.author = author;
@@ -62,12 +79,6 @@ function submitBook() {
     tableDiv.innerHTML = " "
 
     var br = document.createElement("br"); 
-
-    
-
-//    this.pages = pages;
-// .  this.read = read;
-
 
     // Create a form dynamically
     var form = document.createElement("form");
