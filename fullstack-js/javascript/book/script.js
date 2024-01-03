@@ -3,23 +3,6 @@ console.log('hi!')
 
 const myLibrary = [];
 
-(function(window, document, undefined) {
-
-    // code that should be taken care of right away
-  
-    window.onload = init;
-  
-    function init(){
-      // the code to be called when the dom has loaded
-      // #document has its nodes
-      let originalContent = document.getElementById("myTable")
-      console.log('original content reference')
-      console.log(originalContent)      
-    }
-  
-  })(window, document, undefined);
-
-
 function Book(title, author, pages, read){
     this.title = title;
     this.author = author;
@@ -37,7 +20,26 @@ function addBookToLibrary(book) {
 
 const TheHobbit = new Book("The Hobbit", "JK Rowling", "200", true)
 
-addBookToLibrary(TheHobbit);
+function addRow(tableID) {
+    console.log('inside addRow func')
+
+      // Get a reference to the table
+  let tableRef = document.getElementById(tableID);
+
+  // Insert a row at the end of the table
+  let newRow = tableRef.insertRow(-1);
+
+  // Insert a cell in the row at index 0
+  let newCell = newRow.insertCell(0);
+
+  // Append a text node to the cell
+  let newText = document.createTextNode("New bottom row");
+  newCell.appendChild(newText);
+    
+
+}
+
+addRow("myTable")
 
 console.log(myLibrary);
 
