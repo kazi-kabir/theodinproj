@@ -1,13 +1,13 @@
-console.log('hi!')
-
 const getBookTable = document.getElementById('myTable');
 const myLibrary = [];
 
-function Book(title, author, pages, read){
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+    }
 }
 
 Book.prototype.info = function() {
@@ -25,12 +25,6 @@ addBookToLibrary(TheHobbit);
 addBookToLibrary(DeepWork)
 
 function displayBooksToTable() {
-    // get all the books from my library
-    // loop through 
-    // add each to the table 
-
-
-
     myLibrary.forEach(item => {
 
         let mutableTableState = getBookTable.insertRow(-1);
@@ -43,11 +37,10 @@ function displayBooksToTable() {
         title.innerHTML = item.title
         author.innerHTML = item.author
         pages.innerHTML = item.pages
-        read.innerHTML = item.author
+        read.innerHTML = item.read
 
-        console.log('looping inside my library')
-        console.log(item)
-
+        console.log('looping inside my library');
+        console.log(item);
     })
 }
 
