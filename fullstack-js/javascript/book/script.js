@@ -21,6 +21,11 @@ function addBookToLibrary(book) {
 const TheHobbit = new Book("The Hobbit", "JK Rowling", "200", true)
 
 function addRow(tableID) {
+    let getBookTable = document.getElementById('myTable')
+
+    getBookTable.style.display = 'none';
+
+
     console.log(tableID);
 }
 
