@@ -1,6 +1,7 @@
 const getBookTable = document.getElementById('myTable');
 const myLibrary = [];
 
+// classes in this method aren't supported by older browsers, have to use the function Book() {} implicit constructor def but works locally so whatever
 class Book {
     constructor(title, author, pages, read) {
         this.title = title;
