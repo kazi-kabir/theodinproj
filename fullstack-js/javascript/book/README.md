@@ -11,6 +11,7 @@ ok so let's break down the steps
 1. populate book table with a single entry (hardcoded) 
 2. create form to add books and return
    1. hide current table when that is occuring
-   2. on submit make sure that book is being added to the table
+   2. create a form with html elements - show and hide it depending on the state of the table
+   3. on submit make sure that book is being added to the table
       1. you can do this by remembering to add it to the myLibrary array
 

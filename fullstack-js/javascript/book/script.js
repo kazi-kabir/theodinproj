@@ -1,4 +1,6 @@
 const getBookTable = document.getElementById('myTable');
+const getForm = document.getElementById('formID');
+
 const myLibrary = [];
 
 // classes in this method aren't supported by older browsers, have to use the function Book() {} implicit constructor def but works locally so whatever
@@ -19,11 +21,13 @@ function addBookToLibrary(book) {
     myLibrary.push(book)
 }
 
-const TheHobbit = new Book("The Hobbit", "JK Rowling", "200", true)
-const DeepWork = new Book("Deep Work", "Cal Newport", "200", false)
+const TheHobbit = new Book("The Hobbit", "JK Rowling", "200", true);
+const DeepWork = new Book("Deep Work", "Cal Newport", "200", false);
+const WillyWonka = new Book("Willy Wonka", "Roald Dahl", "200", true);
 
 addBookToLibrary(TheHobbit);
-addBookToLibrary(DeepWork)
+addBookToLibrary(DeepWork);
+addBookToLibrary(WillyWonka)
 
 function displayBooksToTable() {
     myLibrary.forEach(item => {
@@ -53,6 +57,8 @@ function isTableHidden() {
 
 function addRow(tableID) {
     getBookTable.style.display = 'none';
+    getForm.style.display = 'flex';
+    
 
     let tableStatus = isTableHidden();
 
@@ -65,8 +71,6 @@ function addRow(tableID) {
     //create a new object from that form
     //add that to our Library
     // once submit happens return to main view to show all books
-
-
 }
 
 
