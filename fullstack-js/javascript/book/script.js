@@ -57,7 +57,7 @@ function isTableHidden() {
 
 function addRow(tableID) {
     getBookTable.style.display = 'none';
-    getForm.style.display = 'flex';
+    getForm.style.display = 'block';
     
 
     let tableStatus = isTableHidden();
