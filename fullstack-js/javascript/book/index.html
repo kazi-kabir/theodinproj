@@ -15,6 +15,10 @@
          display: none;
         }
 
+        #return-button {
+         display: none;
+        }
+
      </style>
 </head>
 <body>
@@ -22,6 +26,8 @@
     <h1>My Library</h1>
 
     <button type="button" onclick="addRow('myTable')">Add Book</button>
+
+    <button type="button" id="return-button" onclick="hideFormShowTable()">Return</button>  
 
     <table id="myTable">
         <thead>
@@ -44,9 +50,9 @@
       <input type="text" id="author" name="author"><br>
       <label for="pages">Pages</label><br>
       <input type="text" id="pages" name="pages"><br>
-      <input type="radio" id="yes" name="yes" value="yes" />
+      <input type="radio" id="yes" name="radAnswer" value="yes" />
       <label for="yes">yes</label><br>
-      <input type="radio" id="no" name="no" value="no" />
+      <input type="radio" id="no" name="radAnswer" value="no" />
       <label for="no">no</label><br>
       <input type="submit" value="Submit">
     </form>

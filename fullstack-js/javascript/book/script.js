@@ -1,5 +1,6 @@
 const getBookTable = document.getElementById('myTable');
 const getForm = document.getElementById('formID');
+const getReturnButton = document.getElementById('return-button')
 
 const myLibrary = [];
 
@@ -55,10 +56,18 @@ function isTableHidden() {
     return getBookTable.style.display = 'none' ? true : false
 }
 
+function hideFormShowTable() {
+   if(getBookTable.style.display === 'none') {
+    getBookTable.style.display = 'revert'
+    getForm.style.display = 'none'
+   }
+}
+
 function addRow(tableID) {
     getBookTable.style.display = 'none';
     getForm.style.display = 'block';
-    
+    getReturnButton.style.display = 'inline'
+
 
     let tableStatus = isTableHidden();
 
