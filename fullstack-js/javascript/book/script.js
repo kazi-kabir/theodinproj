@@ -80,8 +80,18 @@ function addRow(tableID) {
     // create a new object from that form
     // add that to our Library
     // once submit happens return to main view to show all books
+
+
 }
 
+// good example https://stackoverflow.com/questions/66072838/passing-form-data-to-javascript 
+function submitForm () {
+    const inputValues = document.querySelectorAll('#formID input')
+    const fname = inputValues[0].value;
+    const lname = inputValues[1].value;
+ 
+    console.log(fname, lname);
+}
 
 
 
