@@ -114,6 +114,9 @@ function submitForm() {
 
     displayBooksToTable();
     getBookTable.style.display = 'revert'; 
+    getForm.style.display = 'none';
+    getReturnButton.style.display = 'none';
+    document.forms[0].reset();
 }
 
 
