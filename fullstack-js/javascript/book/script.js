@@ -87,16 +87,17 @@ function addRow(tableID) {
 // good example https://stackoverflow.com/questions/66072838/passing-form-data-to-javascript 
 function submitForm () {
     const inputValues = document.querySelectorAll('#formID input')
-    const fname = inputValues[0].value;
-    const lname = inputValues[1].value;
-    const author = inputValues[2].value;
-    const read = inputValues[3].value;
+    const title = inputValues[0].value;
+    const author = inputValues[1].value;
+    const pages = inputValues[2].value;
+    const readStatus = inputValues[3].value;
 
-    const addedBook = new Book(fname, lname, author, ReadableByteStreamController);;
+    const addedBook = new Book(title, author, pages, readStatus);
 
     myLibrary.push(addedBook)
 
-    console.log(fname, lname);
+    console.log(myLibrary);
+
 }
 
 
