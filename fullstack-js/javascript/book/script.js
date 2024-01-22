@@ -89,10 +89,15 @@ function submitForm () {
     const inputValues = document.querySelectorAll('#formID input')
     const fname = inputValues[0].value;
     const lname = inputValues[1].value;
- 
+    const author = inputValues[2].value;
+    const read = inputValues[3].value;
+
+    const addedBook = new Book(fname, lname, author, ReadableByteStreamController);;
+
+    myLibrary.push(addedBook)
+
     console.log(fname, lname);
 }
-
 
 
 console.log(myLibrary);
