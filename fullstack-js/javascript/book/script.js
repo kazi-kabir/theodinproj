@@ -3,6 +3,8 @@ const getForm = document.getElementById('formID');
 const getReturnButton = document.getElementById('return-button')
 
 const myLibrary = [];
+let itemsInTable = []
+
 
 // classes in this method aren't supported by older browsers, have to use the function Book() {} implicit constructor def but works locally so whatever
 class Book {
@@ -22,6 +24,10 @@ function addBookToLibrary(book) {
     myLibrary.push(book);
 }
 
+function isInArray(value, array) {
+    return array.indexOf(value) > -1;
+}
+
 const TheHobbit = new Book("The Hobbit", "JK Rowling", "200", true);
 const DeepWork = new Book("Deep Work", "Cal Newport", "200", false);
 const WillyWonka = new Book("Willy Wonka", "Roald Dahl", "200", true);
@@ -31,22 +37,30 @@ addBookToLibrary(DeepWork);
 addBookToLibrary(WillyWonka)
 
 function displayBooksToTable() {
+
     myLibrary.forEach(item => {
 
-        let mutableTableState = getBookTable.insertRow(-1);
+        if(!isInArray(item, itemsInTable)) {
+            let mutableTableState = getBookTable.insertRow(-1);
     
-        let title = mutableTableState.insertCell(0);
-        let author = mutableTableState.insertCell(1);
-        let pages = mutableTableState.insertCell(2);
-        let read = mutableTableState.insertCell(3);
+            let title = mutableTableState.insertCell(0);
+            let author = mutableTableState.insertCell(1);
+            let pages = mutableTableState.insertCell(2);
+            let read = mutableTableState.insertCell(3);
+        
+            title.innerHTML = item.title
+            author.innerHTML = item.author
+            pages.innerHTML = item.pages
+            read.innerHTML = item.read
     
-        title.innerHTML = item.title
-        author.innerHTML = item.author
-        pages.innerHTML = item.pages
-        read.innerHTML = item.read
+            console.log('looping inside my library');
+            console.log(item);
+        }
 
-        console.log('looping inside my library');
-        console.log(item);
+        
+
+        itemsInTable.push(item);
+
     })
 }
 

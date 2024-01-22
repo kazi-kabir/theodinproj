@@ -10,4 +10,5 @@ todo
 - BUG: adding books to table twice, this is because of the Display Table function 
   - potential solutions
     - prevent dupes from being added into array 
+    - create an array that adds each element in the form table, if a dupe exists we skip that iteration
 - styling
