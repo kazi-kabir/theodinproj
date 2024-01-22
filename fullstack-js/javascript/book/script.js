@@ -19,7 +19,7 @@ Book.prototype.info = function() {
 }
 
 function addBookToLibrary(book) {
-    myLibrary.push(book)
+    myLibrary.push(book);
 }
 
 const TheHobbit = new Book("The Hobbit", "JK Rowling", "200", true);
@@ -85,7 +85,7 @@ function addRow(tableID) {
 }
 
 // good example https://stackoverflow.com/questions/66072838/passing-form-data-to-javascript 
-function submitForm () {
+function submitForm() {
     const inputValues = document.querySelectorAll('#formID input')
     const title = inputValues[0].value;
     const author = inputValues[1].value;
@@ -98,6 +98,8 @@ function submitForm () {
 
     console.log(myLibrary);
 
+    displayBooksToTable();
+    getBookTable.style.display = 'revert'; 
 }
 
 
