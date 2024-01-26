@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        table,
-        td,
-        th {
+        table {
            border: 1px solid black;
+           border-collapse: collapse;
+           text-align: center;
+	        vertical-align: middle;
         }
 
         form {
@@ -19,10 +20,15 @@
          display: none;
         }
 
+        body {
+         font-family: sans-serif;
+        }
+
      </style>
 </head>
 <body>
     
+   <div id="wrapper">
     <h1>My Library</h1>
 
     <button type="button" onclick="addRow('myTable')">Add Book</button>
@@ -58,6 +64,7 @@
     </form onsubmit="return false">
 
    </body>
+</div>
    <script src="script.js" defer></script>
 </body>
 </html>
