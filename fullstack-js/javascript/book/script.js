@@ -88,14 +88,6 @@ function addRow(tableID) {
     console.log(tableStatus);
 
     console.log(tableID);
-
-    // also add button that hides this view and returns us to the main view
-    // make a form that takes in all the book object parameters
-    // create a new object from that form
-    // add that to our Library
-    // once submit happens return to main view to show all books
-
-
 }
 
 // good example https://stackoverflow.com/questions/66072838/passing-form-data-to-javascript 
