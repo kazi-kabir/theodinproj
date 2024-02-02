@@ -17,19 +17,21 @@ function isWinner(playerArray) {
 
     winningArrays.forEach((i) => {
         console.log(i)
+
         if(JSON.stringify(i) === JSON.stringify(playerArray)) {
-            console.log('yeet')
+            console.log('yeet');
         }
 
-        let reversedPlayerArray = playerArray.reverse();
-
-        console.log(reversedPlayerArray)
+        // array not reversing, investigate 
+        let reversedPlayerArray = playerArray;
+        reversedPlayerArray.reverse();
+        console.log('rev ' + reversedCorrectArray)
 
         if(JSON.stringify(i) === JSON.stringify(reversedPlayerArray)) {
-            console.log('reversed yeet')
+            console.log('reversed yeet');
         }
     })
 
 }
 
-isWinner(correctArray)
+isWinner(reversedCorrectArray)
