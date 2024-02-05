@@ -15,3 +15,5 @@ tictactoe LOGIC
   - 357 
   - and those reversed 
 
+- draw the gameboard 
+

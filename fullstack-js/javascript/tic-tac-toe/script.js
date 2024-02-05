@@ -17,6 +17,8 @@ let fem = [...reversedCorrectArray].reverse()
 console.log(fem)
 
 
+// get user values 
+
 
 function isWinner(playerArray) {
 
@@ -34,7 +36,6 @@ function isWinner(playerArray) {
             console.log('reversed yeet');
         }
     })
-
 }
 
 isWinner(reversedCorrectArray);
