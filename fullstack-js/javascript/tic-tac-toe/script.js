@@ -6,26 +6,29 @@
 
 console.log('hello world')
 
-let correctArray = [123];
-let reversedCorrectArray = [321];
-let incorrectArray = [312];
+let correctArray = [1,2,3];
+let reversedCorrectArray = [3,2,1];
+let incorrectArray = [3,1,2];
+
+console.log(reversedCorrectArray, 'pre-reverse')
+
+let fem = [...reversedCorrectArray].reverse()
+
+console.log(fem)
+
 
 
 function isWinner(playerArray) {
 
-    const winningArrays = [[123], [456], [789], [147], [258], [369], [159], [357]]
+    const winningArrays = [[1,2,3], [4,5,6], [7,8,9], [1,4,7], [2,5,8], [3,6,9], [1,5,9], [3,5,7]]
 
     winningArrays.forEach((i) => {
-        console.log(i)
-
         if(JSON.stringify(i) === JSON.stringify(playerArray)) {
             console.log('yeet');
         }
 
-        // array not reversing, investigate 
         let reversedPlayerArray = playerArray;
         reversedPlayerArray.reverse();
-        console.log('rev ' + reversedCorrectArray)
 
         if(JSON.stringify(i) === JSON.stringify(reversedPlayerArray)) {
             console.log('reversed yeet');
@@ -34,4 +37,5 @@ function isWinner(playerArray) {
 
 }
 
-isWinner(reversedCorrectArray)
+isWinner(reversedCorrectArray);
+
