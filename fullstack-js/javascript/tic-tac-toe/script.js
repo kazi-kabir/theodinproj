@@ -40,3 +40,11 @@ function isWinner(playerArray) {
 
 isWinner(reversedCorrectArray);
 
+var elementIsClicked = false; // declare the variable that tracks the state
+function clickHandler(){ // declare a function that updates the state
+  elementIsClicked = true;
+  console.log('clicked')
+}
+
+var element = document.getElementById('1'); // grab a reference to your element
+element.addEventListener('click', clickHandler); // associate the function above with the click event
