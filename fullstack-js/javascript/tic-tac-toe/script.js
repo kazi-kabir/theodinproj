@@ -40,11 +40,85 @@ function isWinner(playerArray) {
 
 isWinner(reversedCorrectArray);
 
-var elementIsClicked = false; // declare the variable that tracks the state
-function clickHandler(){ // declare a function that updates the state
-  elementIsClicked = true;
-  console.log('clicked')
+let clickCount = 0;
+
+function clickCounter() {
+    clickCount++    
 }
 
-var element = document.getElementById('1'); // grab a reference to your element
-element.addEventListener('click', clickHandler); // associate the function above with the click event
+function insertSymbol() {
+    if(clickCount % 2 === 0) {
+        let symbolO = document.createTextNode('O')
+        return symbolO; 
+    }
+
+    if(clickCount % 2 !== 0) {
+        let symbolX = document.createTextNode('X')
+        return symbolX; 
+    }
+
+}
+
+document.getElementById('1').addEventListener("click",function(){
+    console.log('clicked')
+    clickCounter();
+    let symbol = insertSymbol();
+    document.getElementById('1').appendChild(symbol)
+ })
+
+document.getElementById('2').addEventListener("click",function(){
+    console.log('clicked')
+    console.log('clicked')
+    clickCounter();
+    let symbol = insertSymbol();
+    document.getElementById('2').appendChild(symbol)
+ })
+
+document.getElementById('3').addEventListener("click",function(){
+    console.log('clicked')
+    clickCounter();
+    let symbol = insertSymbol();
+    document.getElementById('3').appendChild(symbol)
+})
+
+document.getElementById('4').addEventListener("click",function(){
+    console.log('clicked')
+    clickCounter();
+    let symbol = insertSymbol();
+    document.getElementById('4').appendChild(symbol)
+})
+
+document.getElementById('5').addEventListener("click",function(){
+    console.log('clicked')
+    clickCounter();
+    let symbol = insertSymbol();
+    document.getElementById('5').appendChild(symbol)
+})
+
+document.getElementById('6').addEventListener("click",function(){
+    console.log('clicked')
+    clickCounter();
+    let symbol = insertSymbol();
+    document.getElementById('6').appendChild(symbol)
+})
+
+document.getElementById('7').addEventListener("click",function(){
+    console.log('clicked')
+    clickCounter();
+    let symbol = insertSymbol();
+    document.getElementById('7').appendChild(symbol)
+})
+
+document.getElementById('8').addEventListener("click",function(){
+    console.log('clicked')
+    clickCounter();
+    let symbol = insertSymbol();
+    document.getElementById('8').appendChild(symbol)
+})
+
+document.getElementById('9').addEventListener("click",function(){
+    console.log('clicked')
+    clickCounter();
+    let symbol = insertSymbol();
+    document.getElementById('9').appendChild(symbol)
+})
