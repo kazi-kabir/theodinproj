@@ -1,0 +1,25 @@
+{
+  "name": "theodinproj",
+  "version": "1.0.0",
+  "description": "it is designed the way the course is, so each projects lives underneath its own directory",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazi-kabir/theodinproj.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kazi-kabir/theodinproj/issues"
+  },
+  "homepage": "https://github.com/kazi-kabir/theodinproj#readme",
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.29.1"
+  }
+}
