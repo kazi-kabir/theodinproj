@@ -17,6 +17,7 @@ async function getWeatherData() {
     console.log(data);
 
     weatherLocation.innerHTML = data['location']['name']
+    
     temperature.innerHTML = data['current']['temp_c']
     
 }
